@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function print_Info(){
-        return "this is admin controller";
+        return "this i's admin controller";
     }
 }
