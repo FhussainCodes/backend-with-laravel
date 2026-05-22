@@ -18,4 +18,5 @@ Route::get('/greeting', function () {
 
 Route::get('test',[TestController::class, 'test']);
 Route::get('t',[c::class, 'C']);
-Route::get('/user/{id}/{name}',[UserController::class, 'user_Data']);
+Route::get('/user/{name}/{id}',[UserController::class, 'user_Data'])
+->where('id','[0-9]+');
