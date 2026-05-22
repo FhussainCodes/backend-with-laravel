@@ -7,6 +7,7 @@ use App\Http\Controllers\c;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\StudentsController;
+use App\Models\Student;
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,3 +25,15 @@ Route::get('/user/{name}/{id}',[UserController::class, 'user_Data'])
 ->where('id','[0-9]+');
 Route::resource('Rdemo',ResourceController::class);
 Route::get('/Sdata',[StudentsController::class,'studentData']);
+
+
+Route::get('/add-student', function () {
+
+    Student::create([
+        'name' => 'Farrukh',
+        'semester' => '5th'
+    ]);
+
+    return "Student Added";
+
+});

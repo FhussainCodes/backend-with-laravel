@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('semester');
         });
     }
-
+    
     public function down(): void
     {
         Schema::dropIfExists('_students');
